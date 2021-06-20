@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Project 78
+        </title>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+        <h1>
+            My Family Book
+        </h1>
+        <img src="My family book.JPG" style="width: 30%;" id="family_member_image">
+        <h4 id="family_member_name"></h4>
+        <button onclick="Change();">Next</button>
+        </center>
+        <script>
+            var images = ["My family book.JPG","Appa.JPG","Amma.JPG","Akka.JPG","Myself.JPG","Patty.JPG","Thatha.JPG"];
+            var names = ["Family Book","Easwaran","Danalakshmi","Sruthi Mahalakshmi","Harish Krishna","Kamala","Subramanian"];
+           var i = 0;
+           function Change()
+           {
+           i++;
+           var number_of_family_member_in_array = 6
+           if(i > number_of_family_member_in_array )
+           {
+               i=0;
+           }
+           var updatedimage = images[i];
+           var updatedname  = names[i];
+           document.getElementById("family_member_image").src = updatedimage;
+           document.getElementById("family_member_name").innerHTML = updatedname
+           }
+        </script>
+    </body>
+</html>
